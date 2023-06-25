@@ -13,6 +13,7 @@ export default function reducer(state, action) {
       });
       return { ...nextState };
     }
+
     case DRAG_AND_DROP_CARD: {
       //console.log(state);
       console.log(action.payload);

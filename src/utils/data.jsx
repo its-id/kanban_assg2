@@ -183,7 +183,7 @@ export const appData = {
     {
       id: 1,
       title: "Mobile App",
-      color: "",
+      color: "green",
       active: true,
       tasksCol: MobileAppData,
     },
