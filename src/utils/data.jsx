@@ -8,8 +8,8 @@ import c1 from "../assets/card/cardContent1.svg";
 import c2 from "../assets/card/cardContent2.png";
 import c3 from "../assets/card/cardContent3.svg";
 
-const task1 = {
-  id: "c1",
+const todo1 = {
+  id: "d1",
   title: "Brainstorming",
   text: "Brainstorming brings team members diverse experience into play. ",
   users: [p1, p4, p3],
@@ -19,8 +19,8 @@ const task1 = {
   image: "",
 };
 
-const task2 = {
-  id: "c2",
+const todo2 = {
+  id: "d2",
   title: "Research",
   text: "User research helps you to create an optimal product for users. ",
   users: [p2, p5],
@@ -29,8 +29,8 @@ const task2 = {
   priority: "High",
   image: "",
 };
-const task3 = {
-  id: "c3",
+const todo3 = {
+  id: "d3",
   title: "Wireframes",
   text: "Low fidelity wireframes include the most basic content and visuals.",
   users: [p1, p5, p4],
@@ -40,8 +40,8 @@ const task3 = {
   image: "",
 };
 
-const task4 = {
-  id: "c4",
+const todo4 = {
+  id: "d4",
   title: "Mockup",
   text: "Low fidelity mockup include the most basic content and visuals.",
   users: [profilePic, p1],
@@ -51,8 +51,8 @@ const task4 = {
   image: "",
 };
 
-const task5 = {
-  id: "c5",
+const todo5 = {
+  id: "d5",
   title: "Onboarding Illustrations ",
   text: "",
   users: [p3, p4, p1],
@@ -62,8 +62,8 @@ const task5 = {
   image: c1,
 };
 
-const task6 = {
-  id: "c6",
+const todo6 = {
+  id: "d6",
   title: "Moodboard ",
   text: "",
   users: [p3],
@@ -73,8 +73,8 @@ const task6 = {
   image: c2,
 };
 
-const task7 = {
-  id: "c7",
+const todo7 = {
+  id: "d7",
   title: "User Journeys ",
   text: "User journeys are the step-by-step journey that a user takes to reach their goal.",
   users: [p5, p4],
@@ -84,8 +84,8 @@ const task7 = {
   image: "",
 };
 
-const task8 = {
-  id: "c8",
+const todo8 = {
+  id: "d8",
   title: "Mobile App Design",
   text: "",
   users: [p5, p4],
@@ -95,8 +95,8 @@ const task8 = {
   image: c3,
 };
 
-const task9 = {
-  id: "c9",
+const todo9 = {
+  id: "d9",
   title: "Design System",
   text: "It just needs to adapt the UI from what you did before ",
   users: [p1, p3, p4],
@@ -106,21 +106,22 @@ const task9 = {
   image: "",
 };
 
-const sidebarClose = false;
+const toggleSidebar = false;
+
 const MobileAppData = [
   {
     id: "title1",
     title: "To Do",
     color: "purple",
-    tasks: [task1, task2, task3, task4],
+    todos: [todo1, todo2, todo3, todo4],
   },
   {
     id: "title2",
     title: "On Progress",
     color: "orange",
-    tasks: [task5, task6, task7],
+    todos: [todo5, todo6, todo7],
   },
-  { id: "title3", title: "Done", color: "green", tasks: [task8, task9] },
+  { id: "title3", title: "Done", color: "green", todos: [todo8, todo9] },
 ];
 
 const WebsiteRedesign = [
@@ -128,15 +129,15 @@ const WebsiteRedesign = [
     id: "title1",
     title: "WR To Do",
     color: "purple",
-    tasks: [task1, task2, task3, task4],
+    todos: [todo1, todo2, todo3, todo4],
   },
   {
     id: "title2",
     title: "WR On Progress",
     color: "orange",
-    tasks: [task5, task6, task7],
+    todos: [todo5, todo6, todo7],
   },
-  { id: "title3", title: "WR Done", color: "green", tasks: [task8, task9] },
+  { id: "title3", title: "WR Done", color: "green", todos: [todo8, todo9] },
 ];
 
 const DesignSystem = [
@@ -144,15 +145,15 @@ const DesignSystem = [
     id: "title1",
     title: "DS To Do",
     color: "purple",
-    tasks: [task1, task2, task3, task4],
+    todos: [todo1, todo2, todo3, todo4],
   },
   {
     id: "title2",
     title: "DS On Progress",
     color: "orange",
-    tasks: [task5, task6, task7],
+    todos: [todo5, todo6, todo7],
   },
-  { id: "title3", title: "DS Done", color: "green", tasks: [task8, task9] },
+  { id: "title3", title: "DS Done", color: "green", todos: [todo8, todo9] },
 ];
 
 const Wireframes = [
@@ -160,15 +161,15 @@ const Wireframes = [
     id: "title1",
     title: "W To Do",
     color: "purple",
-    tasks: [task1, task2, task3, task4],
+    todos: [todo1, todo2, todo3, todo4],
   },
   {
     id: "title2",
     title: "W On Progress",
     color: "orange",
-    tasks: [task5, task6, task7],
+    todos: [todo5, todo6, todo7],
   },
-  { id: "title3", title: "W Done", color: "green", tasks: [task8, task9] },
+  { id: "title3", title: "W Done", color: "green", todos: [todo8, todo9] },
 ];
 
 export const appData = {
@@ -185,29 +186,29 @@ export const appData = {
       title: "Mobile App",
       color: "green",
       active: true,
-      tasksCol: MobileAppData,
+      todosTab: MobileAppData,
     },
     {
       id: 2,
       title: "Website Redesign",
       color: "orange",
       active: false,
-      tasksCol: WebsiteRedesign,
+      todosTab: WebsiteRedesign,
     },
     {
       id: 3,
       title: "Design System",
       color: "purple",
       active: false,
-      tasksCol: DesignSystem,
+      todosTab: DesignSystem,
     },
     {
       id: 4,
       title: "Wireframes",
       color: "blue",
       active: false,
-      tasksCol: Wireframes,
+      todosTab: Wireframes,
     },
   ],
-  sidebarClose,
+  toggleSidebar,
 };

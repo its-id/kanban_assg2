@@ -11,7 +11,7 @@ const userNavigation = [
   { name: "Sign out", href: "#" },
 ];
 
-const OptionsMenu = ({ content, right = false, classes, navigation }) => {
+const OptionsMenu = ({ content, right = false, classes = "" }) => {
   return (
     <Menu as="div" className={`relative ${classes}`}>
       <Menu.Button className="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600">{content}</Menu.Button>
@@ -27,7 +27,7 @@ const OptionsMenu = ({ content, right = false, classes, navigation }) => {
         <Menu.Items
           className={`absolute ${
             right ? "origin-top-right right-0" : "origin-top-left left-0"
-          } mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none`}
+          } z-10 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none`}
         >
           {userNavigation?.map((item, idx) => (
             <Menu.Item key={idx}>

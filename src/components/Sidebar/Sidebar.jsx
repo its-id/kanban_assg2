@@ -3,7 +3,7 @@ import { Transition } from "@headlessui/react";
 
 import { Icon } from "@iconify/react";
 import { CardContext } from "../../context/CardContext";
-import { TOGGLE_SIDEBAR, CHANGE_ACTIVE_PROJECT } from "../../context/actionTypes";
+import { TOGGLE_SIDEBAR, CHANGE_PROJECT } from "../../context/actionTypes";
 
 import logo from "../../assets/companyLogo.svg";
 import OptionsMenu from "../OptionsMenu/OptionsMenu";
@@ -81,7 +81,7 @@ const Sidebar = ({ isShowing, setIsShowing }) => {
                 )}
                 title={i.title}
                 onClick={() => {
-                  dispatch({ type: CHANGE_ACTIVE_PROJECT, payload: i.id });
+                  dispatch({ type: CHANGE_PROJECT, payload: i.id });
                 }}
               >
                 {i.title}

@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "./Header/Header";
 import Options from "./Options/Options";
-import Tasks from "./Tasks/Tasks";
+import Tasks from "./Tasks/Todos";
 
 const Main = () => {
   return (
