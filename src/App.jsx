@@ -1,12 +1,10 @@
-import { useContext, Fragment, useState, useEffect } from "react";
-import { Transition } from "@headlessui/react";
+import { useContext, useState } from "react";
 
 import { Navbar, Sidebar, Main } from "./components";
 import { CardContext } from "./context/CardContext";
-import { TOGGLE_SIDEBAR } from "./context/actionTypes";
 
 const App = () => {
-  const [state, dispatch] = useContext(CardContext);
+  const [state] = useContext(CardContext);
   const { toggleSidebar } = state;
 
   const [isShowing, setIsShowing] = useState(!toggleSidebar);

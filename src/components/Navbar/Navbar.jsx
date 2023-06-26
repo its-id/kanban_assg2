@@ -46,6 +46,7 @@ const Navbar = ({ isShowing, setIsShowing }) => {
       </section>
 
       <OptionsMenu
+        userMenu={true}
         right={true}
         content={
           <div className="flex items-center gap-4 cursor-pointer ml-4 md:ml-0">

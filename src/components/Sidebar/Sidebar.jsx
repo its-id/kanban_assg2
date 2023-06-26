@@ -64,7 +64,7 @@ const Sidebar = ({ isShowing, setIsShowing }) => {
         <section>
           <div className="flex justify-between items-center uppercase font-semibold text-xs p-3">
             my projects
-            <OptionsMenu content={<Icon icon="fluent:add-square-24-regular" className="w-4 h-4 text-[#787486]" />} />
+            <OptionsMenu classes="font-normal" content={<Icon icon="fluent:add-square-24-regular" className="w-4 h-4 text-[#787486]" />} />
           </div>
         </section>
         <section className="my-2 mx-3">
@@ -91,8 +91,10 @@ const Sidebar = ({ isShowing, setIsShowing }) => {
               >
                 {i.title}
                 <OptionsMenu
-                  classes="ml-auto -top-[2px]"
-                  content={<span className={classNames(i.active ? "inline-block" : "hidden", "tracking-tighter hover:visible")}>. . .</span>}
+                  classes="ml-auto -top-[2px] font-normal"
+                  content={
+                    <span className={classNames(i.active ? "inline-block" : "hidden", "tracking-tighter hover:visible font-medium")}>. . .</span>
+                  }
                 />
               </div>
             );
