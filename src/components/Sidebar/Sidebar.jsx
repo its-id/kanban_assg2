@@ -27,7 +27,12 @@ const Sidebar = ({ isShowing, setIsShowing }) => {
       leaveFrom="translate-x-0"
       leaveTo="-translate-x-full"
     >
-      <aside className={classNames(toggleSidebar ? "hidden" : "", "grow-0 shrink-0 w-[250px] border-r border-r-[#DBDBDB]")}>
+      <aside
+        className={classNames(
+          toggleSidebar ? "hidden" : "absolute bg-white md:static z-40 md:z-0",
+          "grow-0 shrink-0 w-[250px] border-r border-r-[#DBDBDB]"
+        )}
+      >
         <section className="flex items-center justify-between grow-0 shrink-0 w-[250px] h-[88px] border-b border-b-[#DBDBDB] px-[24px]">
           <div className="flex gap-[8px] font-semibold text-xl text-[#0D062D]">
             <img src={logo} alt="Project M." />

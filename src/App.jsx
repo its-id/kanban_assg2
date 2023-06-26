@@ -11,16 +11,14 @@ const App = () => {
 
   const [isShowing, setIsShowing] = useState(!toggleSidebar);
 
-  useEffect(() => {
-    if (window.innerWidth < 1024) {
-      dispatch({ type: TOGGLE_SIDEBAR, payload: toggleSidebar });
-    }
-  }, []);
-
   return (
-    <div className={"w-full bg-white flex"}>
+    <div className={"w-full bg-white flex relative md:static"}>
       <Sidebar isShowing={isShowing} setIsShowing={setIsShowing} />
-      <section className={`${toggleSidebar ? "w-full" : "w-[calc(100%_-_250px)]"} ml-auto duration-200 ease-in-out overflow-hidden`}>
+      <section
+        className={`${
+          toggleSidebar ? "w-full" : "w-full absolute md:static -z-40 md:z-0 md:w-[calc(100%_-_250px)]"
+        } ml-auto duration-200 ease-in-out overflow-hidden`}
+      >
         <Navbar setIsShowing={setIsShowing} isShowing={isShowing} />
         <Main />
       </section>
