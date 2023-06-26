@@ -4,7 +4,6 @@ import TodoCard from "../TodoCard/TodoCard";
 import OptionsMenu from "../../../OptionsMenu/OptionsMenu";
 
 const TodosBox = ({ id, color, title, todos, addBtn }) => {
-  console.log("todos in todosbox", todos);
 
   return (
     <Droppable droppableId={id}>

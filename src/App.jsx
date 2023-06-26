@@ -10,7 +10,6 @@ const App = () => {
   const { toggleSidebar } = state;
 
   const [isShowing, setIsShowing] = useState(!toggleSidebar);
-  // const [showMain, setShowMain] = useState(true);
 
   useEffect(() => {
     if (window.innerWidth < 1024) {
@@ -21,21 +20,10 @@ const App = () => {
   return (
     <div className={"w-full bg-white flex"}>
       <Sidebar isShowing={isShowing} setIsShowing={setIsShowing} />
-      <Transition
-        as={Fragment}
-        show={true}
-        enter="transition ease-in-out duration-300 transform"
-        enterFrom="-translate-x-[250px]"
-        enterTo="translate-x-0"
-        leave="transition ease-in-out duration-300 transform"
-        leaveFrom="translate-x-0"
-        leaveTo="-translate-x-[250px]"
-      >
-      <section className={`${toggleSidebar ? "w-full" : "w-[calc(100%_-_250px)]"} overflow-hidden`}>
+      <section className={`${toggleSidebar ? "w-full" : "w-[calc(100%_-_250px)]"} ml-auto duration-200 ease-in-out overflow-hidden`}>
         <Navbar setIsShowing={setIsShowing} isShowing={isShowing} />
         <Main />
       </section>
-      </Transition>
     </div>
   );
 };

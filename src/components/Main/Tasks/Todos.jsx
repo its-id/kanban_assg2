@@ -23,8 +23,6 @@ const Todos = () => {
     dispatch({ type: DRAG_AND_DROP_CARD, payload: result });
   };
 
-  console.log("todosTab", todosTab);
-
   return (
     <DragDropContext onDragEnd={onDragEnd}>
       <div className="flex flex-col md:flex-row gap-4 overflow-hidden overflow-x-auto">

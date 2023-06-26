@@ -19,8 +19,10 @@ const Navbar = ({ isShowing, setIsShowing }) => {
   const { toggleSidebar } = state;
 
   return (
-    <header className="border-b border-b-[#DBDBDB] h-auto md:h-[88px] flex flex-wrap md:flex-nowrap items-center gap-4 p-4 md:px-4 md:py-0 lg:px-12">
-      <section className={classNames(toggleSidebar ? "block" : "hidden")}>
+    <header
+      className={`border-b border-b-[#DBDBDB] h-auto md:h-[88px] flex flex-wrap md:flex-nowrap items-center gap-4 p-4 md:px-4 md:py-0 lg:px-12`}
+    >
+      <section className={classNames(toggleSidebar ? "block transition-all" : "hidden")}>
         <div
           className="cursor-pointer"
           onClick={() => {

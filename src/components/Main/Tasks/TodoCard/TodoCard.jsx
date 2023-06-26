@@ -14,7 +14,7 @@ const TodoCard = ({ id, title, text, users, comments, files, priority, image, in
           {...provided.dragHandleProps}
           ref={provided.innerRef}
         >
-          <div className={`${snapshot.isDraggingOver ? "bg-red" : ""}`}>
+          <div className={`${snapshot.isDraggingOver ? "placeholder" : ""}`}>
             <div className="mb-2 flex items-center justify-between">
               <span
                 className={`bg-[#dfa874]/20 rounded-md py-1 px-1.5 text-xs text-[#D58D49] ${
